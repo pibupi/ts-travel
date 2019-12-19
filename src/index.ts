@@ -1,2 +1,1 @@
-let num: number = 123;
-console.log(num);
+import './views/basic-type'
