@@ -23,9 +23,10 @@
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 
     /* Strict Type-Checking Options */
-    "strict": true,                           /* Enable all strict type-checking options. */
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
-    // "strictNullChecks": true,              /* Enable strict null checks. */
+    // 此处设置为true,那么相当于下面那几项都设置为true
+    // "strict": true,                           /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */ 这一项就是函数参数不指定类型就会报错
+    // "strictNullChecks": true,              /* Enable strict null checks. */ 是否可以设置为null值
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
     // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
     // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
