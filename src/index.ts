@@ -1,1 +1,2 @@
-import './views/basic-type'
+// import './views/basic-type'
+import './views/symbol'
