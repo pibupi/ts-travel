@@ -56,8 +56,8 @@ console.log(info2) // 此时值已被膝盖
 // bad
 // info2.s7 = 'hehe' // 这样直接修改是不行的
 // 获取属性值有两种方式：
-// console.log(info.name)
-// console.log(info[name])
+console.log(info.name)
+console.log(info[name])
 // 在symbol作为属性时，只能通过[]的方式来获取
 
 // 属性名的遍历（4种方式）
@@ -90,5 +90,3 @@ const s12 = Symbol.for('haha')
 // Symbol.keyFor() 
 // 接受的参数为Symbol.for()全局注册的symbol值，以symbol创建的是不行的
 console.log(Symbol.keyFor(s10)) // 会返回创建该值的标识
-
-//  ts是对数据的结构进行检测，接口是让我们对代码定义一些结构，让其他人使用的时候能够遵循一些规定

@@ -100,7 +100,7 @@ const func = (text: string): void => {
 }
 // good
 func('abc')
-// 切记：上面已指定了text为string,这里传入数值类型，就会直接报错！
+// 注意：上面已指定了text为string,这里传入数值类型，就会直接报错！
 // bad
 // func(123)
 // ts的好处，比如你在项目中写了一些公共的组件函数，那么别人在使用你的这个组件的时候，就会在编写阶段查找出错误，提高开发效率
@@ -128,28 +128,32 @@ num1 = null
 
 // 十、never类型
 // 不会有返回值的类型为never类型，以下是常见两种情况
+// 1.抛出错误
 // const errorFunc = (message: string): never => {
 //   throw new Error(message)
 // }
 // errorFunc('aaa')
+// 2.死循环
 // const infiniteFunc = (): never => {
 //   while (true) {}
 // }
 // never是其他任何类型的子类型，但是其它任何类型都不是never类型的子类型
-// let neverVarible = (() => {
-//   while (true) {}
-// })() // 立即执行函数，返回值类型为never
-// // neverVarible = 123 // 此时给never类型赋值就会报错
-// num1 = neverVarible // 把never类型的值赋值给其他类型四可以的
+let neverVarible = (() => {
+  while (true) {}
+})() // 立即执行函数，返回值类型为never
+// neverVarible = 123 // 此时给never类型赋值就会报错
+num1 = neverVarible // 把never类型的值赋值给其他类型四可以的
 
 // 十一、object
+// 先来看下es5中的对象引用
+// 引用类型复制的值的地址，这个就不多价绍了,obj1也会跟着改变
 let obj = {
   name: 'zh'
 }
 let obj2 = obj
 obj2.name = 'qt'
 console.log(obj)
-// 引用类型复制的值的地址，这个就不多价绍了,obj1也会跟着改变
+// 在ts中给变量定义object类型如下：
 function getObject(obj: object): void {
   console.log(obj)
 }
