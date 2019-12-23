@@ -13,23 +13,23 @@ var p2 = new Point(4, 5)
 console.log(p2.getPosition())
 
 // 2.es6中的写法
+// 每个类都必须有constructor函数，如果没有的话
+// 会默认加一个空的constructor(){}
 class Point2 {
-  // 每个类都必须有constructor函数，如果没有的话
-  // 会默认加一个空的constructor(){}
   constructor(x, y) {
     this.x = x
     this.y = y
     // return {a:'a'} // 如果返回自己定义的对象，那么就会把这个对象返回
     // 这样的话在创建实例之后，那么实例instanceof Point2就会为false,就不是这个类的构造函数了
   }
-  // 这个函数是定义在原型对象上的
+  // 这个函数就是定义在原型对象上的
   getPosition() {
     return `${this.x},${this.y}`
   }
 }
 const p3 = new Point2(1, 2)
 console.log(p3)
-console.log(p3 instanceof Point2) // true
+console.log(p3 instanceof Point2) // true，可以知道该实例p3是由基类Point2来实现的
 // 在es6中必须使用new操作符来创建实例，不然会报错，es5中是可以不使用new的
 // const p4 = Point2(1,2) // 会报错
 console.log(p3.hasOwnProperty('x')) // true ，说明是实例自身的属性
@@ -74,15 +74,15 @@ console.log(info2.age) // 此时会调用get
 
 // 4.class表达式
 // es5中定义函数的方式
-// const func = function () {}
-// function func () {}
+const func = function () {}
+function func () {}
 // es6中定义class的方式
-// class Infoss {
-//   constructor(){}
-// }
-// const Infoss = class C {
-//   constructor() {}
-// }
+class Infoss {
+  constructor(){}
+}
+const Infoss = class C {
+  constructor() {}
+}
 // const testInfo = new C() // 这是会报错的，说明类的名字不是C，而是Infoss
 // 注意：此时这个实例的类名时Infoss,并不是C
 // 所以这种形式定义class 后面的C是可以省略的：
@@ -112,7 +112,7 @@ class Point3 {
 }
 const p = new Point3(1, 2)
 console.log(p.getPosition())
-// console.log(p.getClassName()) // 这就报错了，因为静态方法只能类自己去调用，是继承不了的
+// console.log(p.getClassName()) // 这就报错了，因为静态方法只能类自己去调用，实例是调用不了的
 console.log(Point3.getClassName()) // 类自身才可以调用
 
 // 6.实例属性的其它写法
@@ -176,9 +176,9 @@ const p5 = new Point6()
 //   }
 // }
 // 在b.js中使用
-// import Point from 'a.js'
-// const p6 = new Point()
-// console.log(p6) // 这是没有func4那个方法的
+import Point from 'a.js'
+const p6 = new Point()
+console.log(p6) // 这是没有func4那个方法的
 
 // 9.私有属性（新的提案中可以添加#来定义私有属性,但是还没有发布），在ts中是可以有方式来定义私有属性的
 class Point7 {

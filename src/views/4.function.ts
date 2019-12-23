@@ -1,9 +1,9 @@
 // 0.普通定义函数方式
-// function add2(arg1: number, arg2: number): number {
-//   return arg1 + arg2
-// }
+function add2(arg1: number, arg2: number): number {
+  return arg1 + arg2
+}
 // 使用箭头函数
-// const ad = (arg1: number, arg2: number) => arg1 + arg2
+//  
 
 // 1.不使用接口定义函数
 let add3: (x: number, y: number) => number // 指定返回值为number
