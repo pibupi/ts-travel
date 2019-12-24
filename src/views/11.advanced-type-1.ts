@@ -231,6 +231,7 @@ interface Circle {
   kind: 'circle' // 单例类型
   radius: number
 }
+// 定义返回值为never类型的函数作为default逻辑
 function assertNever(value: never): never {
   throw new Error('Unexpected object:' + value)
 }

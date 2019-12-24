@@ -26,7 +26,7 @@ const infos2 = { age: 18 }
 const infos3 = { name: 'zh', sex: 'man', info: { age: 20 } }
 infos = infos1
 // infos = infos2 // 报错，没有name字段
-infos = infos3 // 多一个属性是可以的，但如果有对象就要按照约束来
+infos = infos3 // 多一些属性是可以的，但如果有对象就要按照约束来
 // 检测方式是深层次递归检测的
 
 // 5.函数兼容性
@@ -63,7 +63,7 @@ const res = getSum([1, 2, 3], (...args: number[]): number =>
   args.reduce((a, l) => a + l, 0)
 )
 console.log(res)
-// 这个函数我不用任意个参数了，这样也可以
+// 下面这个函数我不用任意个参数了，这样也可以
 const res2 = getSum(
   [1, 2, 3],
   (arg1: number, arg2: number, arg3: number): number => arg1 + arg2 + arg3
@@ -76,7 +76,7 @@ let funcA = (arg: number | string): void => {}
 let funcB = (arg: number): void => {}
 funcA = funcB
 funcB = funcA
-// 这两个参数可以接受一个number类型，都是可以的
+// 这两个函数可以接受一个number类型，都是可以的
 // 上面相互赋值都是可以的，可以通过tsconfig配置禁止使用双向协变
 
 // 7.返回值类型
@@ -173,5 +173,4 @@ interface Data2<T> {
 }
 let data3: Data2<number>
 let data4: Data2<string>
-// data3 = data4 报错 // 因为接口中要求有data属性，data3要求data属性类型为number类型，data4要求data属性为string类型
-// 是不兼容的
+// data3 = data4 报错 // 因为接口中要求有data属性，data3要求data属性类型为number类型，data4要求data属性为string类型，是不兼容的

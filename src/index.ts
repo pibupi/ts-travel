@@ -7,6 +7,5 @@
 // import './views/7.es6-class-2.js'
 // import './views/8.class'
 // import './views/9.enum'
-
-
- 
+// import './views/10.interence-compatibility'
+import './views/11.advanced-type-1'
