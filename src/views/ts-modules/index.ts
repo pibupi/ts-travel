@@ -11,11 +11,11 @@
 // console.log(name)
 import name = require('./c')
 console.log(name)
-// 3中引入形式
+// 3种引入形式
 // import moment from 'moment'
 // import * as moment from 'moment'
-import moment = require('moment')
-console.log(moment)
+// import moment = require('moment')
+// console.log(moment)
 
 // 名命空间：不推荐使用了，(使用模块多)
 // 如果使用tsc编译的话，需要像下面这样引入

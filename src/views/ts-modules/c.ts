@@ -1,3 +1,3 @@
-// export default 'lison'
-const name = 'lison'
+// export default 'zh'
+const name = 'zh'
 export = name

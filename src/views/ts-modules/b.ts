@@ -1,2 +1,2 @@
-export const name = 'lison'
+export const name = 'zh'
 export const age = 18

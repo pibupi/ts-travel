@@ -1,1 +1,1 @@
-document.title = 'lison'
+document.title = 'zh'

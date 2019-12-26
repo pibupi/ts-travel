@@ -1,39 +1,40 @@
 // 1.第一种导出方式
-// export const name = 'lsion'
-// export const aget = 18
-// export const address = 'bejng'
+  export const name = 'zh'
+  export const aget = 18
+  export const address = 'bejng'
 
 // 2.第二种导出方式
-// const name = 'lson'
-// const age = 18
-// const address = 'beijing '
-// export {name,age,address}
+const name = 'lson'
+const age = 18
+const address = 'beijing '
+export {name,age,address}
 
 // 3.可以导出函数和类
-// export function func () {}
-// export class A {}
+export function func () {}
+export class A {}
 
 // 4.可以为导出的变量函数类起别名
-// function func1() {}
-// class B {}
-// const b = ''
-// export {
-//   func as Function1,
-//   B as ClassB,
-//   b as stringB,
-//   b as String
-// }
+function func1() {}
+class B {}
+const b = ''
+export {
+  func as Function1,
+  B as ClassB,
+  b as stringB,
+  b as String
+}
 // 5.以下导出方式是错误的
-//  5.1.export 'lsion' 是错误的，不能直接导出值，export到出的是一个接口!外部要通过这个接口获取值
-//  5.2.const name = 'lsion'
+//  5.1.export 'zh' 是错误的，不能直接导出值，export到出的是一个接口!外部要通过这个接口获取值
+//  5.2.
+//  const name = 'zh'
 //      export name// 错误的
 
 // 6.导出的值在另一个文件引用并发生了变化，那么这个文件中的值也会发生相应的变化
-// import { time } from './b'
-// console.log(time)
-// setInterval(()=>{
-//   console.log(time)
-// },1000)
+import { time } from './b'
+console.log(time)
+setInterval(()=>{
+  console.log(time)
+},1000)
 
 // 7.export 语句不能出现在块级作用域中（比如放在if语句中是会报错的）
 // es6中的模块设计属于静态编译，import语句在编译代码的时候已经引入进来了，而不是代码执行的时候才引入的
