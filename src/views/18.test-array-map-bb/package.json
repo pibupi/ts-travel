@@ -1,0 +1,17 @@
+{
+  "name": "test-array",
+  "version": "1.0.0",
+  "description": "test-array-map-bb with ts",
+  "main": "./dist/test-array-map.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript.zh"
+  ],
+  "author": "zh",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  }
+}
